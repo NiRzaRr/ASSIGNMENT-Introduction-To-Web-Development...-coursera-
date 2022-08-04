@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Customer Service Page</title>
+    <link rel="stylesheet" href="assign05.css">  <!-- CSS REFERENCE LINK -->
+</head>
+<!-- IF YOUR ANY APPLE DEVICE IS MALFUNCTIONING, THEN YOU'll HAVE TO FILL THIS FORM FOR COMPLAINT OF YOUR DEVICE, AND APPLE WILL HELP YOU ASAP.-->
+<body>
+    <div id="main">
+    <nav id="nav_apple"> <!-- This nav contains, heading and Image -->
+    <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAB3CAMAAAAO5y+4AAAAVFBMVEX///9mZmZjY2NfX19bW1tXV1f8/Pzo6Ohvb29qamrb29vw8PD09PSkpKR6enqHh4fi4uLS0tLGxsaVlZW8vLzMzMy1tbWurq6NjY2bm5uBgYF0dHRc/6yQAAADvklEQVRoge2a2XLkIAxFDQK877v9//852J3MGNKdIKMiNTO5D/3SLk6xSEhCUfSjv00qHqe+V4Gp+VSnICAJy81nLjhjjO8huWpgwE7xKiA2XwRj4blNCuw3tw6Gbc+NfRPMobAZv2CZGANhGwPLeBwGm6cmdguDjWq4YhlMYbCTYKbyINjYwsIaBBstYE03zKlqpUkVgYy3Ns5ysDuh4dZ0myDYaDZ3Vw5hsMpcZlGGwWpXZZjQEggbZVfjhTpYnDFeuBAwnBv+BBmh3LLB5aIOZEDvXK4lZJ2FpGovmez7tnZFWKqWUtZhUsUhqhOmmnFe+6Xuy655OabOUcp+S1Ktql6nzHcVVFvuHACOrdS/+zo+udnzsazY+c15zo7vk7X1QBdDxeHqDfWQ6dIZ6GLsEwDrijg+rIa7K94lwh7vtBuNfpuMyspUPvnm8V3V3qHm9asR9ZCwDHGRTZW0Iw7jM7niF7vlnw15oFPxbDkMwY6NfAb5xZBu4hznVWYa7HHAMOAPcbEHGJG6dHRYTLiXsa/OC0quoYjaabFp58YtPzUgNLZ3zJkyys1l4BzdVpSrDI5rrMM1Kss9JNw9dEI4Xele7bBzPB9hUoiebrq8cr+Ac8JVFgjPPBA65t4dGy1085WIq9fM8byEKmVldC7S3WNEtNuLKWXRWRGuEL2RcVEltILu5hWY7Y3prAgwMbtdb/QQx+TilFc+JmAn5KIK7//AfL9tnb/pXKHsiJArMNVZQvsFzK1P6K94guAWhEEs5mApwlwB9UJJGF4xhuBSpoKYp1HKRJ/v7lzCuA5lwoRx7CHn0M56m/EU4o2Ftsbg/mBImnUjgnfKfPAEOxoT7QYz97rKRLrBWsItgI9pN5gddTOn/JuyrvIQF6uDIc/UC60F7GuDIow5LmCHyg5pve5N0mGLSYvPDzlVlBT9fN1uJloffUg6PefE1FzXStaH9hdPScfQ0m4I8ZR7JasnnbB0TpVIJ4xpMaQ80pgHM6ttzguLamQZyCacol5EFVXlDtsLRnQtYWr9D9E8iaJeYR+iWOk7HXeFP/ded1TrvdI3u2V9vQfilc6U38Ukbndl5T6xFqqSZCm+7y/BqyW5eQ0+24VeY9EOwwLzZ2NzIWBby3JJQT6Fw+bbCZUn9uHiUvTdu4WobKrlh0Ye6bG371LrZVgOMllbu89sXFNxWRfgNC2rWXU0dWmmgGp+3kpWtGui/z7bw8RC1V+osnlL0mrt4k8OS9EM5bJt9Uza1aiK3OWk2K1+P/o/9QuuazK9pg4CqQAAAABJRU5ErkJggg==" alt="Logo" class="logo_img">  APPLE CUSTOMER SERVICE! 
+    </p>
+    </nav><br>
+     <form action="">   <!-- FORM STARTS HERE -->
+        <label>Name: <input type="text" onblur="namee()" id="fname"></label><span id="stxt">&nbsp;</span><br><br>
+        <label>Date Of Purchase: <input type="date"></label><br><br>
+        <label>Invoice No.: <input type="number" id="inumm" onblur="inum()"></label><span id="itxt">&nbsp;</span><br><br>
+        <label>IMEI No. Of Device: <input type="text"></label><br><br>
+        <label>Device Category: <select name="category" id="">
+            <option value="">--Select Your Device Category--</option>
+            <option value="1st">PC</option>
+            <option value="2nd">MacBook</option>
+            <option value="3rd">SmartPhone</option>
+            <option value="4th">iPad</option>
+            <option value="5th">Others</option>
+        </select></label><br><br>
+        <label>Model Name: <input type="text" placeholder="ex. iphone 13, macbook air M1, etc" style="width: 220px;"></label><br><br>
+        <p><textarea name="discription" id="" cols="35" rows="7" placeholder="Discribe the problem with your device..."></textarea></p>
+        <label>Is it Still Under Warranty ? <input type="radio" name="warranty" id="Yes">YES 
+            <input type="radio" name="warranty" id="NO">NO</label><br><br>
+        <label><input type="button" value="SUBMIT" id="btn" onclick="obtn()"></label><br><br><br>
+        <p id="sbmt" style="font-size: 22px ;">&nbsp;</p>
+        
+    </form>
+</div>
+<script> // JS starts from Here...
+    // FUNCTION FOR VALIDATING NAME, WHETHER LENGTH OF INPUT IS <5 OR >5 !!
+    function namee(){
+        let naam = document.getElementById("fname").value ;
+        if(naam.length < 5){
+           document.getElementById('stxt').innerHTML= "&nbsp&nbsp" + "TOO SHORT";
+           document.getElementById("stxt").style.color = 'red';
+        }
+        else{
+            document.getElementById('stxt').innerHTML= "&nbsp&nbsp" + "PERFECT";
+            document.getElementById("stxt").style.color = 'green';
+        }
+    }
+    // FUNCTION FOR SUBMITING THE FORM
+    function obtn(){
+            let naam = document.getElementById("fname").value ; 
+            document.getElementById("sbmt").innerHTML= naam.toUpperCase() + ",&nbsp&nbsp" +  "THANK YOU!!" + '<br><br>' + "Your problem will be shared to maintenance department, within 2 working days." ;
+    }
+    // FUNCTION FOR VALIDINTING INVOICE NUMBER (MAX. 10 digits)
+    function inum(){
+        let ino = document.getElementById("inumm").value;
+        if(ino.length != 10){
+        document.getElementById("itxt").innerHTML = "It should be 10 digits only";
+        document.getElementById("itxt").style.color = 'red';
+        }
+        else{
+            document.getElementById("itxt").innerHTML = "Valid";
+            document.getElementById("itxt").style.color = 'green';
+        }
+    }
+</script>
+</body>
+</html>
