@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VS code Feedback Form</title>
+</head>
+<body>
+    <h1>VS Code Feedback Form </h1>
+    <form>
+        <p> NAME:<input type="text" id="name" onblur="nn()" > <span id="txt">&nbsp;</span> </p>
+        <p>EMAIL:<input type="email" name="email" id=""></p>
+        <p>GENDER: <input type="radio" name="Gender" id="FEMALE">Female
+        <input type="radio" name="Gender" id="MALE">Male</p>
+        <p>DATE OF BIRTH:<input type="date" name="DOB" id=""></p>
+        <p>QUALIFICATION: <input type="radio" name="Qualification" id="Studying">Studying
+        <input type="radio" name="Qualification" id="Completed">Completed</p>
+         <textarea name="Feedback" id="" cols="100" rows="12" placeholder="GIVE YOUR FEEDBACK HERE..." ></textarea>
+         <p><input type="button" value="SUBMIT" onclick="sub()"></p><br><br>
+         <p id="done" style="font-size: 25px;">&nbsp;</p>
+    </form>
+    <script>
+        function nn(e){
+            let yy = document.getElementById("name").value;
+            if( yy.length <= 5){
+                document.getElementById('txt').innerHTML="INVALID!!";
+                document.getElementById('txt').style.color= 'red';
+                }
+                else {
+                    document.getElementById('txt').innerHTML="VALID!!"
+                    document.getElementById('txt').style.color= 'green';
+                }
+        }
+        function sub(){
+            let namee = document.getElementById("name").value;
+              document.getElementById('done').innerHTML= namee + "," + '&nbsp' + "Thanks For Your Valuable Feedback !!";
+        }
+       
+    </script>
+</body>
+</html>
